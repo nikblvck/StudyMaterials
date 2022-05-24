@@ -68,8 +68,13 @@ namespace ChooseYourOwnAdventure
             Console.WriteLine("THE END");
           break;
           case "3":
-            Console.WriteLine("You choose the third key. The door doesn't open.");`
+            Console.WriteLine("You choose the third key. The door doesn't open.");
             Console.WriteLine("THE END");
+          break;
+          default:
+            Console.WriteLine("You didn't choose a number between 1 and 3. The door doesn't open.");
+            Console.WriteLine("THE END");
+          break;
         }
       }
       //Captuer user's answer to the riddle:
