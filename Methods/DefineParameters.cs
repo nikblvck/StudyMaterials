@@ -8,11 +8,13 @@ namespace DefineParameters
   {
     static void Main(string[] args)
     {
-
+      VisitPlanets(4);
+      VisitPlanets(6);
+      VisitPlanets(1);
     }
-    static void VisitPlanets()
+    static void VisitPlanets(int numberOfPlanets)
     {
-      Console.WriteLine("You visited many new planets...");
+      Console.WriteLine($"You visited {numberOfPlanets} new planets...");
     }
   }
 }
