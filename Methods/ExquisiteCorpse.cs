@@ -8,9 +8,49 @@ namespace ExquisiteCorpse
   {
     static void Main(string[] args)
     {
-
+      BuildACreature("ghost", "monster", "bug");
     }
+    static void BuildACreature(string head, string body, string feet)
+    {
+      switch (head)
+      {
+        case "monster":
+          MonsterHead();
+          break;
+        case "ghost":
+          GhostHead();
+          break;
+        case "bug":
+          BugHead();
+          break;
+      }
 
+      switch (body)
+      {
+        case "monster":
+          MonsterBody();
+          break;
+        case "ghost":
+          GhostBody();
+          break;
+        case "bug":
+          BugBody();
+          break;
+      }
+
+      switch (feet)
+      {
+        case "monster":
+          MonsterFeet();
+          break;
+        case "ghost":
+          GhostFeet();
+          break;
+        case "bug":
+          BugFeet();
+          break;
+      }
+    }
     static void GhostHead()
     {
       Console.WriteLine("     ..-..");
@@ -75,4 +115,3 @@ namespace ExquisiteCorpse
     }
   }
 }
-
