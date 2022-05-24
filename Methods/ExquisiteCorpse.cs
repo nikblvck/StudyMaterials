@@ -8,7 +8,12 @@ namespace ExquisiteCorpse
   {
     static void Main(string[] args)
     {
-      BuildACreature("ghost", "monster", "bug");
+      int num1 = TranslateToNumber("ghost");
+      int num2 = T`ranslateToNumber("bug");
+      int num3 = TranslateToNumber("monster");
+
+      SwitchCase(num1, num2, num3);
+      RandomMode();
     }
     static void BuildACreature(string head, string body, string feet)
     {
@@ -47,6 +52,71 @@ namespace ExquisiteCorpse
           GhostFeet();
           break;
         case "bug":
+          BugFeet();
+          break;
+      }
+    }
+    static void RandomMode()
+    {
+      Random randomNumber = new Random();
+      int randomNumber1 = randomNumber.Next(1, 4);
+      int randomNumber2 = randomNumber.Next(1, 4);
+      int randomNumber3 = randomNumber.Next(1, 4);
+
+      SwitchCase(randomNumber1, randomNumber2, randomNumber3);
+    }
+    static int TranslateToNumber(string creature)
+    {
+      switch(creature)
+    {
+      case "monster":
+        return 1;
+      case "ghost":
+        return 2;
+      case "bug":
+        return 3;
+      default:
+        return 1;
+    }
+    }
+
+    static void SwitchCase(int head, int body, int feet)
+    {
+      switch(head)
+      {
+        case 1:
+          MonsterHead();
+          break;
+        case 2:
+          GhostHead();
+          break;
+        case 3:
+          BugHead();
+          break;
+      }
+
+      switch(body)
+      {
+        case 1:
+          MonsterBody();
+          break;
+        case 2:
+          GhostBody();
+          break;
+        case 3:
+          BugBody();
+          break;
+      }
+
+      switch(feet)
+      {
+        case 1:
+          MonsterFeet();
+          break;
+        case 2:
+          GhostFeet();
+          break;
+        case 3:
           BugFeet();
           break;
       }
